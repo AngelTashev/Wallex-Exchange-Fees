@@ -1,0 +1,352 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Helvetica', sans-serif;
+            background: url('./images/wallex_logo.svg');
+            background: #333333;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        header {
+            padding: 0;
+            width: 100%;
+            background  : #666666;
+            border-radius: 0px 0px 10px 10px;
+            box-shadow: 0px 1px 11px -1px rgba(0,0,0,0.7);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1, h3, button {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navigation-list {
+            align-items: center;
+            display: flex;
+            list-style: none;
+            margin-right: 30px;
+        }
+
+        .header-btn:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        .header-btn {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 10px 20px;
+            box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.4);
+            font-weight: 100;
+        }
+
+        .header-btn:active {
+            box-shadow: inset 0px 0px 10px -1px rgba(0,0,0,0.4);
+        }
+
+        .header-btn:focus {
+            outline: none;
+        }
+
+        .header-img-wrapper {
+            width: 50px;
+            margin: 17px 15px 17px 0px;
+            box-shadow: 0px 0px 10px -5px rgba(0,0,0,1);
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid #000;
+            padding: 0;
+        }
+
+        .header-img {
+            margin: 0;
+            object-fit: contain;
+            display: block;
+        }
+
+        .header-containers {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+        }
+
+        .header-title-container {
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .header-title {
+            color: white;
+            font-weight: 300;
+        }
+
+        .last-refresh,
+        #last-refresh-text {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .last-refresh {
+            margin-right: 12px  ;
+        }
+
+        #last-refresh-text {
+            margin-right: 40px;
+            width: 30px;
+            align-items: center;
+        }
+
+        main {
+            margin-top: 100px;
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .price-articles {
+            padding: 0;
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 80%;
+        }
+
+        .price-articles-section {
+            flex-basis: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .price-article-title {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .price-article-container {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+
+        .price-block {
+            border: 1px solid #000;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.6);
+        }
+
+        .price-block p {
+            font-size: 16px;
+        }
+
+        .price-block p span {
+            padding: 0px 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 17px;
+        }
+
+        .eur {
+            background: #1c608c;
+        }
+
+        .usd {
+            background: #12743b;
+        }
+
+        .price {
+            font-weight: 500;
+        }
+
+        .calculator-container {
+            height: 100%;
+            display: flex;
+            flex-basis: 40%;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            justify-content: center;
+        }
+
+        .form-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .from-to-container h3 {
+            margin-right: 10px;
+        }
+
+        .from-to-container .to-h3 {
+            margin-left: 10px;
+        }
+
+        .fee-container,
+        .custom-rate-container,
+        .amount-container {
+            justify-content: space-between;
+        }
+
+        #custom-rate,
+        #amount {
+            font-size: 16px;
+            padding: 10px;
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.4);
+        }
+
+        #custom-rate:focus,
+        #amount:focus {
+            outline: none;
+            box-shadow: inset 0px 0px 10px -1px rgba(0,0,0,0.4);
+        }
+
+        .amount-container h3 {
+            margin-right: 10px;
+        }
+
+        .convert-button-wrapper {
+            width: 100%;
+        }
+
+        #convert-btn {
+            border: 2px solid #000;
+            color: #fff;
+            height: 40px;
+            border-radius: 20px;
+            width: 100%;
+            background: #1c608c;
+            box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.4);
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        #convert-btn:active {
+            box-shadow: inset 0px 0px 10px -1px rgba(0,0,0,0.4);
+        }
+
+        #convert-btn:focus {
+            outline: none;
+        }
+
+        select {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 15px;
+            padding: 5px;
+            width: 80px;
+            font-size: 18px;
+        }
+
+        .result-container #result {
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        .result-container {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .rate-container {
+            margin-top: 0;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .rate-container #for-rate {
+            margin-left: 10px;
+        }
+
+        .form-title {
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+
+        @media screen and (max-width: 900px) {
+
+            main {
+                flex-direction: column;
+                align-items: center;
+                height: fit-content;
+            }
+
+            .header-navigation-container {
+                display: none;
+            }
+            
+            .header-containers {
+                background: red;
+                align-items: center;
+            }
+
+            .price-articles-section {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .price-articles {
+                width: 50%;
+                flex-direction: column;
+            }
+
+            .price-block {
+                width: 70vw;
+            }
+
+            .calculator-container {
+                display: flex;
+                flex-basis: 100%;
+            }
+        }

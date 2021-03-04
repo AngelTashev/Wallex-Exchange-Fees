@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallex Change Rates</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/wallex_logo.svg" type="image/x-icon">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./scripts/options.js" defer></script>
+    <script src="./scripts/data.js" defer></script>
+    <script src="./scripts/calculator.js" defer></script>
+</head>
+
+<body>
+
+    <header class="sticky">
+        <article class="header-containers">
+            <article class="header-title-container">
+                <article class="header-img-wrapper">
+                    <img class="header-img" src="./images/wallex_logo.svg" alt="">
+                </article>
+                <h1 class="header-title">Wallex Change Rates</h1>
+            </article>
+            <article class="header-navigation-container">
+                <nav>
+                    <ul class="navigation-list">
+                        <li><h3 class="last-refresh">Time since last refresh:</h3></li>
+                        <li><h3 id="last-refresh-text"></h3></li>
+                        <li><button class="header-btn" id="refresh-btn">Refresh</button></li>
+                    </ul>
+                </nav>
+            </article>
+        </article>
+
+    </header>
+
+    <main>
+
+    <section class="price-articles">
+    </section>
+
+        <section class="calculator-container">
+            <section class="calculator-form">
+                <article class="form-title-container">
+                    <h1 class="form-title">Crypto Calculator</h1>
+                </article>
+                <article class="from-to-container form-item">
+                    <h3>FROM</h3>
+                    <select name="from-curr" id="from-curr">
+                        <option value="btc" default>BTC</option>
+                        <option value="eth">ETH</option>
+                        <option value="bch">BCH</option>
+                        <option value="eur">EUR</option>
+                        <option value="usd">USD</option>
+                    </select>
+                    <h3 class="to-h3">TO</h3>
+                    <select name="to-curr" id="to-curr">
+                        <option value="eur" default>EUR</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </article>
+                <article class="fee-container form-item">
+                    <h3>FEE: </h3>
+                    <select name="fee-select" id="fee-select">
+                        <option value="0" selected>0%</option>
+                        <option value="1">1%</option>
+                        <option value="2">2%</option>
+                        <option value="3">3%</option>
+                        <option value="4">4%</option>
+                        <option value="5">5%</option>
+                        <option value="6">6%</option>
+                        <option value="7">7%</option>
+                        <option value="8">8%</option>
+                        <option value="9">9%</option>
+                        <option value="10">10%</option>
+                    </select>
+                </article>
+                <article class="custom-rate-container form-item">
+                    <h3>CUSTOM RATE: </h3>
+                    <input type="checkbox" id="custom-rate-check">
+                    <input type="number" id="custom-rate" disabled>
+                </article>
+                <article class="amount-container form-item">
+                    <h3>AMOUNT: </h3>
+                    <input type="number" id="amount" required>
+                </article>
+                <article class="convert-button-wrapper">
+                    <button id="convert-btn">CONVERT</button>
+                </article>
+                <article class="result-container form-item">
+                    <h3>RESULT:</h3>
+                    <h3 id="result"></h3>
+                </article>
+                <article class="rate-container form-item">
+                    <p>FOR RATE OF:</p>
+                    <p id="for-rate"></p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <script id="container-template" type="text/template">
+        <article class="price-article-container">
+            <h1 class="price-article-title">{{name}}</h1>
+        
+            <article class="price-block eur">
+                <p>EUR</p>
+                <h3 class="price">€ {{eurPrice}}</h3>
+            </article>
+        
+            <article class="price-block usd">
+                <p>USD</p>
+                <h3 class="price">$ {{usdPrice}}</h3>
+            </article>
+        
+        </article>
+    </script>
+
+</body>
+
+</html>
